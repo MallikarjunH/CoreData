@@ -17,6 +17,7 @@
 		06121B18233DCD9200E33F2E /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06121B16233DCD9200E33F2E /* Student+CoreDataProperties.swift */; };
 		06121B1B233DCDED00E33F2E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06121B1A233DCDED00E33F2E /* CoreData.framework */; };
 		06121B26233DDDA600E33F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06121B25233DDDA600E33F2E /* ViewController.swift */; };
+		06121B28233DEB6800E33F2E /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06121B27233DEB6800E33F2E /* DatabaseHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		06121B16233DCD9200E33F2E /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		06121B1A233DCDED00E33F2E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		06121B25233DDDA600E33F2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06121B27233DEB6800E33F2E /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		06121B1F233DCFD000E33F2E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				06121B27233DEB6800E33F2E /* DatabaseHelper.swift */,
 				06121B24233DDA9900E33F2E /* CoreData */,
 			);
 			path = Model;
@@ -226,6 +229,7 @@
 				06121B26233DDDA600E33F2E /* ViewController.swift in Sources */,
 				06121B18233DCD9200E33F2E /* Student+CoreDataProperties.swift in Sources */,
 				06121B09233DCB4E00E33F2E /* CoreData_YogeshPatel.xcdatamodeld in Sources */,
+				06121B28233DEB6800E33F2E /* DatabaseHelper.swift in Sources */,
 				06121AFF233DCB4D00E33F2E /* AppDelegate.swift in Sources */,
 				06121B01233DCB4D00E33F2E /* SceneDelegate.swift in Sources */,
 				06121B17233DCD9200E33F2E /* Student+CoreDataClass.swift in Sources */,
