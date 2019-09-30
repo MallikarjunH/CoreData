@@ -39,8 +39,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Student")
-        //request.predicate = NSPredicate(format: "age = %@", "12")
         request.returnsObjectsAsFaults = false
+       
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
