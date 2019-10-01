@@ -18,6 +18,8 @@
 		06121B1B233DCDED00E33F2E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06121B1A233DCDED00E33F2E /* CoreData.framework */; };
 		06121B26233DDDA600E33F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06121B25233DDDA600E33F2E /* ViewController.swift */; };
 		06121B28233DEB6800E33F2E /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06121B27233DEB6800E33F2E /* DatabaseHelper.swift */; };
+		06121B4A2343797100E33F2E /* ViewSavedDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06121B492343797100E33F2E /* ViewSavedDataVC.swift */; };
+		06121B4C2343799200E33F2E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06121B4B2343799200E33F2E /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		06121B1A233DCDED00E33F2E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		06121B25233DDDA600E33F2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		06121B27233DEB6800E33F2E /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		06121B492343797100E33F2E /* ViewSavedDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewSavedDataVC.swift; path = CoreData_YogeshPatel/Controllers/ViewSavedDataVC.swift; sourceTree = SOURCE_ROOT; };
+		06121B4B2343799200E33F2E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		06121B1D233DCFC500E33F2E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				06121B492343797100E33F2E /* ViewSavedDataVC.swift */,
 				06121B25233DDDA600E33F2E /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -133,6 +138,7 @@
 		06121B22233DD15000E33F2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				06121B4B2343799200E33F2E /* TableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,7 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				06121B26233DDDA600E33F2E /* ViewController.swift in Sources */,
+				06121B4A2343797100E33F2E /* ViewSavedDataVC.swift in Sources */,
 				06121B18233DCD9200E33F2E /* Student+CoreDataProperties.swift in Sources */,
+				06121B4C2343799200E33F2E /* TableViewCell.swift in Sources */,
 				06121B09233DCB4E00E33F2E /* CoreData_YogeshPatel.xcdatamodeld in Sources */,
 				06121B28233DEB6800E33F2E /* DatabaseHelper.swift in Sources */,
 				06121AFF233DCB4D00E33F2E /* AppDelegate.swift in Sources */,
