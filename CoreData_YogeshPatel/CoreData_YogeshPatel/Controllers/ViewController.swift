@@ -13,7 +13,8 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, DataPass {
+    
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -55,11 +56,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    //Mark: Confirm The Protocol
+    func data(object: [String : String]) {
+         nameTextField.text = object["name"]
+         emailTextField.text = object["email"]
+         mobileTextField.text = object["mobile"]
+         stateTextField.text = object["state"]
+    }
+    
+    
    // ViewSavedDataVC //
     @IBAction func showDataButtonClicked(_ sender: Any) {
         
         let detailsVC = self.storyboard?.instantiateViewController(identifier: "ViewSavedDataVCId") as! ViewSavedDataVC
-        
+        detailsVC.delegate = self
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
     

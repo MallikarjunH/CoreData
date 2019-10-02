@@ -8,9 +8,17 @@
 
 import UIKit
 
+protocol DataPass {
+    
+    func data(object: [String:String])
+}
+
 class ViewSavedDataVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var mainTableView: UITableView!
+    
+    //creating delegate
+    var delegate:DataPass!
     
     var student  = [Student]()
     
@@ -45,6 +53,14 @@ class ViewSavedDataVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let dict = ["name":student[indexPath.row].name, "email":student[indexPath.row].email,"mobile":student[indexPath.row].mobile,"state":student[indexPath.row].state]
+        delegate.data(object: dict as! [String: String])
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         
