@@ -7,6 +7,7 @@
 //
 
 //Video 1: https://www.youtube.com/watch?v=JTtYSJtVKMc
+//Video 2: https://www.youtube.com/watch?v=WCCafo-OPn8
 
 
 import UIKit

@@ -52,4 +52,19 @@ class DatabaseHelper{
          return student
     }
     
+    func deleteData(index:Int) -> [Student]{
+      
+        var student1 =  getStudentData()
+        
+        context?.delete(student1[index])
+        student1.remove(at: index)
+        
+        do{
+            try context?.save()
+        }catch{
+            print("Cant delete Data")
+        }
+        
+        return student1
+    }
 }

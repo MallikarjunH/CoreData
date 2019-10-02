@@ -34,15 +34,30 @@ class ViewSavedDataVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellId", for: indexPath) as! TableViewCell
         
-        cell.nameLabel.text = student[indexPath.row].name
+     /*   cell.nameLabel.text = student[indexPath.row].name
         cell.emailLabel.text = student[indexPath.row].email
         cell.mobileLabel.text = student[indexPath.row].mobile
-        cell.stateLabel.text = student[indexPath.row].state
+        cell.stateLabel.text = student[indexPath.row].state */
+        
+        //using computed property - code written in TableViewCell - So top code not need
+        cell.student = student[indexPath.row]
+        
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        return true
+    }
 
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete{
+            student = DatabaseHelper.shareInstance.deleteData(index: indexPath.row)
+            self.mainTableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
     /*
     // MARK: - Navigation
 
