@@ -42,6 +42,7 @@ class DatabaseHelper{
          request.returnsObjectsAsFaults = false
         
          do {
+            
             student = try context?.fetch(request) as! [Student]
     
          }catch {
