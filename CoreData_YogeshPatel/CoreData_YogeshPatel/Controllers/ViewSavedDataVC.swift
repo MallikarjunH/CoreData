@@ -8,12 +8,38 @@
 
 import UIKit
 
-class ViewSavedDataVC: UIViewController {
-
+class ViewSavedDataVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var mainTableView: UITableView!
+    
+    var student  = [Student]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        student = DatabaseHelper.shareInstance.getStudentData()
+    }
+    
+     // MARK: - TableViee DatSource and Deleagte Methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return student.count
+        //return DatabaseHelper.shareInstance.getStudentData().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellId", for: indexPath) as! TableViewCell
+        
+        cell.nameLabel.text = student[indexPath.row].name
+        cell.emailLabel.text = student[indexPath.row].email
+        cell.mobileLabel.text = student[indexPath.row].mobile
+        cell.stateLabel.text = student[indexPath.row].state
+        
+        return cell
     }
     
 

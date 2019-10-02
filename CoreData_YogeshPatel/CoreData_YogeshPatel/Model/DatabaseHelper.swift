@@ -34,4 +34,24 @@ class DatabaseHelper{
     
     }
     
+    func getStudentData() -> [Student]{
+        
+        var student =  [Student]()
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Student")
+         request.returnsObjectsAsFaults = false
+        
+         do {
+            let result = try context!.fetch(request)
+             for data in result as! [NSManagedObject] {
+                print(data.value(forKey: "name") as! String)
+           }
+             
+         } catch {
+             
+             print("Failed")
+         }
+         return student
+    }
+    
 }

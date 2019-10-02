@@ -61,14 +61,14 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-IJ-6OC">
                                 <rect key="frame" x="105" y="351" width="205" height="39"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="dXK-WS-foN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="205" id="rGv-s8-LzZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="Save">
-                                    <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="saveButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1H3-Oj-Tg7"/>
@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="1044.9275362318842" y="138.58695652173915"/>
         </scene>
-        <!--View Controller-->
+        <!--View Saved DataVC-->
         <scene sceneID="lTT-xA-5fd">
             <objects>
-                <viewController id="ggR-Cq-049" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewSavedDataVCId" id="ggR-Cq-049" customClass="ViewSavedDataVC" customModule="CoreData_YogeshPatel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oOl-pu-fno">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +125,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vjA-BG-LCd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCellId" id="vjA-BG-LCd" customClass="TableViewCell" customModule="CoreData_YogeshPatel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vjA-BG-LCd" id="LV1-ey-mgg">
@@ -179,6 +179,12 @@
                                                 <constraint firstItem="f9O-Sh-KkV" firstAttribute="leading" secondItem="26D-Al-wOF" secondAttribute="leading" id="z4m-F6-g3j"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailLabel" destination="26D-Al-wOF" id="dKF-6m-0Pd"/>
+                                            <outlet property="mobileLabel" destination="IQt-7p-whx" id="0fE-Cb-R2u"/>
+                                            <outlet property="nameLabel" destination="f9O-Sh-KkV" id="UzJ-mm-Qd6"/>
+                                            <outlet property="stateLabel" destination="wIa-vS-dhb" id="ax1-4Y-Es0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -197,6 +203,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C20-aR-d6U"/>
                     </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="3lw-T5-in0" id="qm6-Gf-fK1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjm-NG-bGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

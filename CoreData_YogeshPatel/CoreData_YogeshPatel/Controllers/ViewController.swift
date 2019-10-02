@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         //print("Document Directory :",FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Not Found")
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+      /*  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Student")
         request.returnsObjectsAsFaults = false
@@ -50,7 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } catch {
             
             print("Failed")
-        }
+        } */
         
     }
     
