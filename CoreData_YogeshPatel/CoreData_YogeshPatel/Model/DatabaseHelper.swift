@@ -67,4 +67,22 @@ class DatabaseHelper{
         
         return student1
     }
+    
+    
+    func editData(object:[String:String], i:Int){
+        
+        let student =  getStudentData()
+        
+        student[i].name = object["name"]
+        student[i].email = object["email"]
+        student[i].mobile = object["mobile"]
+        student[i].state = object["state"]
+        
+        do{
+            try context?.save()
+        }catch{
+            print("Data is not edit")
+        }
+    }
+    
 }

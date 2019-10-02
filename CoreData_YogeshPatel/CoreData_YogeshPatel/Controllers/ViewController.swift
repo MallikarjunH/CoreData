@@ -14,13 +14,15 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController, UITextFieldDelegate, DataPass {
-    
+
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var mobileTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
     
+    var i = Int()
+    var isUpdate = Bool()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,13 @@ class ViewController: UIViewController, UITextFieldDelegate, DataPass {
         
         DatabaseHelper.shareInstance.save(object: dict as! [String : String])
         
+        if isUpdate{
+            
+            DatabaseHelper.shareInstance.editData(object: dict as! [String:String], i: i)
+        }else{
+            
+            DatabaseHelper.shareInstance.save(object: dict as! [String:String])
+        }
         //print("Document Directory :",FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Not Found")
         
       /*  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -57,12 +66,16 @@ class ViewController: UIViewController, UITextFieldDelegate, DataPass {
     }
     
     //Mark: Confirm The Protocol
-    func data(object: [String : String]) {
-         nameTextField.text = object["name"]
-         emailTextField.text = object["email"]
-         mobileTextField.text = object["mobile"]
-         stateTextField.text = object["state"]
-    }
+    
+    func data(object: [String : String], index: Int, isEdit: Bool) {
+          
+                nameTextField.text = object["name"]
+                emailTextField.text = object["email"]
+                mobileTextField.text = object["mobile"]
+                stateTextField.text = object["state"]
+                i = index
+                isUpdate = isEdit
+       }
     
     
    // ViewSavedDataVC //

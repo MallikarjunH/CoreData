@@ -10,7 +10,7 @@ import UIKit
 
 protocol DataPass {
     
-    func data(object: [String:String])
+    func data(object: [String:String], index: Int, isEdit: Bool)
 }
 
 class ViewSavedDataVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -57,7 +57,7 @@ class ViewSavedDataVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let dict = ["name":student[indexPath.row].name, "email":student[indexPath.row].email,"mobile":student[indexPath.row].mobile,"state":student[indexPath.row].state]
-        delegate.data(object: dict as! [String: String])
+        delegate.data(object: dict as! [String: String], index: indexPath.row, isEdit: true)
         self.navigationController?.popViewController(animated: true)
     }
     
