@@ -15,6 +15,14 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var mobileLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
     
+    var student: Student!{ // computed property // swift 4
+        didSet{
+            nameLabel.text = student.name
+            emailLabel.text = student.email
+            mobileLabel.text = student.mobile
+            stateLabel.text = student.state
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
