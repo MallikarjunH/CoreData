@@ -42,12 +42,9 @@ class DatabaseHelper{
          request.returnsObjectsAsFaults = false
         
          do {
-            let result = try context!.fetch(request)
-             for data in result as! [NSManagedObject] {
-                print(data.value(forKey: "name") as! String)
-           }
-             
-         } catch {
+            student = try context?.fetch(request) as! [Student]
+    
+         }catch {
              
              print("Failed")
          }

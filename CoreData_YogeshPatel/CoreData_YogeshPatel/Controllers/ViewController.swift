@@ -54,6 +54,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+   // ViewSavedDataVC //
+    @IBAction func showDataButtonClicked(_ sender: Any) {
+        
+        let detailsVC = self.storyboard?.instantiateViewController(identifier: "ViewSavedDataVCId") as! ViewSavedDataVC
+        
+        self.navigationController?.pushViewController(detailsVC, animated: true)
+    }
+    
+    
     //MARK: TextField Delagate mthods
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
