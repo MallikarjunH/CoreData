@@ -17,10 +17,10 @@ class TableViewCell: UITableViewCell {
     
     var student: Student!{ // computed property // swift 4
         didSet{
-          //  nameLabel.text = student.name
-          //  emailLabel.text = student.email
-           // mobileLabel.text = student.mobile
-         //   stateLabel.text = student.state
+            nameLabel.text = student.name
+            addressLabel.text = student.address
+            cityLabel.text = student.city
+            mobileLabel.text = student.mobile
         }
     }
     
