@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-NE-xCi">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-NE-xCi">
                                 <rect key="frame" x="29" y="158" width="356" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="eYc-rf-of8"/>
@@ -31,7 +31,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter mobile" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-xb-I6U">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-xb-I6U">
                                 <rect key="frame" x="30" y="217" width="356" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Vzb-DN-Eet"/>
@@ -39,7 +39,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter state" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yXe-Vm-L0C">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter mobile" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yXe-Vm-L0C">
                                 <rect key="frame" x="30" y="283" width="356" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="TxD-aM-0FB"/>
@@ -58,6 +58,9 @@
                                 <state key="normal" title="Save Data">
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveDataButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7h-nN-ch8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0S-Ju-oiE">
                                 <rect key="frame" x="106" y="430" width="205" height="39"/>
@@ -67,6 +70,9 @@
                                 <state key="normal" title="Show Data">
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="showDataButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVD-LI-j5k"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -96,6 +102,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Core Data" id="OjW-L0-Bfv"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="PTQ-NE-xCi" id="tlf-OJ-jqh"/>
+                        <outlet property="cityTextField" destination="sgg-xb-I6U" id="JOe-rx-onQ"/>
+                        <outlet property="mobileTextField" destination="yXe-Vm-L0C" id="g7V-bA-H3s"/>
+                        <outlet property="nameTextField" destination="Zxj-DG-A5X" id="ABi-1W-Fc6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -15,11 +15,23 @@ import CoreData
 
 class ViewController: UIViewController {
 
-    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var mobileTextField: UITextField!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func saveDataButtonClicked(_ sender: Any) {
+    
+    }
+    
+    @IBAction func showDataButtonClicked(_ sender: Any) {
+  
+    }
+    
 }
