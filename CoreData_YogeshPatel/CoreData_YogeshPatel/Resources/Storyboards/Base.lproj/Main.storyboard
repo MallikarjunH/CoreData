@@ -22,6 +22,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iDf-Wa-asX"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-NE-xCi">
                                 <rect key="frame" x="29" y="158" width="356" height="34"/>
@@ -30,6 +33,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="K3S-a9-8ca"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-xb-I6U">
                                 <rect key="frame" x="30" y="217" width="356" height="34"/>
@@ -38,6 +44,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PUF-X2-TMM"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter mobile" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yXe-Vm-L0C">
                                 <rect key="frame" x="30" y="283" width="356" height="34"/>
@@ -46,6 +55,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Lzf-Bi-vAq"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-IJ-6OC">
                                 <rect key="frame" x="105" y="351" width="205" height="39"/>
@@ -180,14 +192,18 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="emailLabel" destination="26D-Al-wOF" id="dKF-6m-0Pd"/>
-                                            <outlet property="mobileLabel" destination="IQt-7p-whx" id="0fE-Cb-R2u"/>
-                                            <outlet property="nameLabel" destination="f9O-Sh-KkV" id="UzJ-mm-Qd6"/>
-                                            <outlet property="stateLabel" destination="wIa-vS-dhb" id="ax1-4Y-Es0"/>
+                                            <outlet property="addressLabel" destination="26D-Al-wOF" id="yqR-4J-3c4"/>
+                                            <outlet property="cityLabel" destination="wIa-vS-dhb" id="ETI-wc-I0Q"/>
+                                            <outlet property="mobileLabel" destination="IQt-7p-whx" id="IQx-TG-670"/>
+                                            <outlet property="nameLabel" destination="f9O-Sh-KkV" id="Ypb-tM-5u0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ggR-Cq-049" id="4HF-Vc-Q81"/>
+                                    <outlet property="delegate" destination="ggR-Cq-049" id="Rsu-V9-DxF"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -199,6 +215,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C20-aR-d6U"/>
                     </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="3lw-T5-in0" id="NBq-Y9-wOv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjm-NG-bGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,7 +13,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         //print("Document Directory :",FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Not Found")
           
         // Show/See the saved data
-         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+      /*   let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
           
           let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Student")
           request.returnsObjectsAsFaults = false
@@ -52,15 +52,23 @@ class ViewController: UIViewController {
           } catch {
               
               print("Failed")
-          }
+          } */
         
     }
     
     //MARK: Show Data
     @IBAction func showDataButtonClicked(_ sender: Any) {
         
+        let viewDataVC = self.storyboard?.instantiateViewController(identifier: "ViewSavedDataVCId") as! ViewSavedDataVC
         
+        self.navigationController?.pushViewController(viewDataVC, animated: true)
   
+    }
+    
+    //
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        return textField.resignFirstResponder()
     }
     
 }
