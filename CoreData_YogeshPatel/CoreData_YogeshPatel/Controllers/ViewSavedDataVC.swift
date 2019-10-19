@@ -9,8 +9,7 @@
 import UIKit
 
 
-
-class ViewSavedDataVC: UIViewController {
+class ViewSavedDataVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
      
     override func viewDidLoad() {
@@ -18,7 +17,6 @@ class ViewSavedDataVC: UIViewController {
 
         // Do any additional setup after loading the view.
         
-       
     }
 
 

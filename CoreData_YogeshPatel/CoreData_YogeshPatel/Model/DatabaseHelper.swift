@@ -18,6 +18,7 @@ class DatabaseHelper{
     
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
+    //MARK: Save Data
     func save(object:[String:String]){
         
         let student = NSEntityDescription.insertNewObject(forEntityName: "Student", into: context!) as! Student
@@ -34,4 +35,22 @@ class DatabaseHelper{
             print("Data is not saved")
         }
     }
+    
+    //MARK: Get Data
+    func getStudentData() -> [Student]{
+        
+      var student = [Student]()
+       
+      let featchRequest = NSFetchRequest<NSManagedObject>(entityName: "Student")
+     
+        do{
+            student = try context?.fetch(featchRequest) as! [Student]
+        }catch{
+            
+            print("Can not get data")
+        }
+        
+        return student
+    }
+    
 }

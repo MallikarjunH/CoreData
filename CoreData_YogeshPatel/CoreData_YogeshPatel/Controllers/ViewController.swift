@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         
         //print("Document Directory :",FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Not Found")
           
+        // Show/See the saved data
          let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
           
           let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Student")
@@ -44,12 +45,14 @@ class ViewController: UIViewController {
               let result = try context.fetch(request)
               for data in result as! [NSManagedObject] {
                  print(data.value(forKey: "name") as! String)
+                 
+                
             }
               
           } catch {
               
               print("Failed")
-          } 
+          }
         
     }
     
